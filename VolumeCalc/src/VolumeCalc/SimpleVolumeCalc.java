@@ -12,7 +12,6 @@ public class SimpleVolumeCalc extends Component {
 
     private int componentWidth;
     private int componentHeight;
-    private Color componentBgColor;
     private Color componentColor;
 
     public SimpleVolumeCalc() {
@@ -20,8 +19,7 @@ public class SimpleVolumeCalc extends Component {
         this.solidRadius = 0;
         this.solidHeight = 0;
         this.componentWidth = 80;
-        this.componentHeight = 40;
-        this.componentBgColor = Color.YELLOW;
+        this.componentHeight = 50;
         this.componentColor = Color.BLACK;
     }
 
@@ -57,14 +55,6 @@ public class SimpleVolumeCalc extends Component {
         this.componentHeight = componentHeight;
     }
 
-    public Color getComponentBgColor() {
-        return componentBgColor;
-    }
-
-    public void setComponentBgColor(Color componentBgColor) {
-        this.componentBgColor = componentBgColor;
-    }
-
     public Color getComponentColor() {
         return componentColor;
     }
@@ -76,10 +66,17 @@ public class SimpleVolumeCalc extends Component {
     @Override
     public void paint(Graphics g) {
         setSize(new Dimension(this.componentWidth, this.componentHeight));
-        setBackground(this.componentBgColor);
         g.setColor(this.componentColor);
 
-        g.drawOval(0, 0, this.componentWidth, this.componentHeight / 10);
+        int height = getSize().height;
+        int width = getSize().width;
+        int w, h;
+        g.drawRect(0, 0, w = width / 2, h = height / 2);
+        g.drawRect(w / 2, h / 2, w / 2 * 2, h / 2 * 2);
+        g.drawLine(0, 0, w / 2, h / 2);
+        g.drawLine(w, h, w / 2 + w / 2 * 2, h / 2 + h / 2 * 2);
+        g.drawLine(w, 0, w / 2 + w / 2 * 2, h / 2);
+        g.drawLine(0, h, w / 2, h / 2 + h / 2 * 2);
     }
 
     public double calcSphereVolume() {
