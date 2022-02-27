@@ -80,14 +80,17 @@ public class SimpleVolumeCalc extends Component {
     }
 
     public double calcSphereVolume() {
+        if (this.solidRadius < 0) return -1;
         return Math.PI * Math.pow(this.solidRadius, 3) * 4 / 3;
     }
 
     public double calcCylinderVolume() {
+        if (this.solidRadius < 0 || this.solidHeight < 0) return -1;
         return this.solidHeight * Math.PI * Math.pow(this.solidRadius, 2);
     }
 
     public double calcConeVolume() {
+        if (this.solidRadius < 0 || this.solidHeight < 0) return -1;
         return this.solidHeight * Math.PI * Math.pow(this.solidRadius, 2) / 3;
     }
 
