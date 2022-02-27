@@ -179,28 +179,17 @@ public class SimpleVolumeCalcTest extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if (jRadioButton1.isSelected()) {
-            System.out.println("sphere");
-            System.out.println(simpleVolumeCalc1.getSolidHeight());
-            System.out.println(simpleVolumeCalc1.getSolidRadius());
-            System.out.println(simpleVolumeCalc1.calcSphereVolume());
             jTextField4.setText(String.valueOf(simpleVolumeCalc1.calcSphereVolume()));
             return;
         }
         if (jRadioButton2.isSelected()) {
-            System.out.println("cylinder");
-                        System.out.println(simpleVolumeCalc1.getSolidHeight());
-            System.out.println(simpleVolumeCalc1.getSolidRadius());
-            System.out.println(simpleVolumeCalc1.calcCylinderVolume());
             jTextField4.setText(String.valueOf(simpleVolumeCalc1.calcCylinderVolume()));
             return;
         }
         if (jRadioButton3.isSelected()) {
-            System.out.println("cone");
-                    System.out.println(simpleVolumeCalc1.getSolidHeight());
-            System.out.println(simpleVolumeCalc1.getSolidRadius());
-            System.out.println(simpleVolumeCalc1.calcConeVolume());
             jTextField4.setText(String.valueOf(simpleVolumeCalc1.calcConeVolume()));
-            return;}
+            return;
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
@@ -213,7 +202,7 @@ public class SimpleVolumeCalcTest extends javax.swing.JFrame {
 
     private void jTextField2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyReleased
         try {
-            simpleVolumeCalc1.setSolidHeight(Double.parseDouble(jTextField1.getText()));
+            simpleVolumeCalc1.setSolidHeight(Double.parseDouble(jTextField2.getText()));
         } catch (Exception exc) {
             return;
         }
