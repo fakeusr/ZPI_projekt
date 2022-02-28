@@ -2,6 +2,8 @@ package VolumeCalcTest;
 
 public class SimpleVolumeCalcTest extends javax.swing.JFrame {
 
+    private int currentComponent = 1;
+
     /**
      * Creates new form SimpleVolumeCalcTest
      */
@@ -32,6 +34,9 @@ public class SimpleVolumeCalcTest extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
+        prostyKalkulatorObjetosci1 = new KalkulatorObjetosci.ProstyKalkulatorObjetosci();
+        jLabel5 = new javax.swing.JLabel();
+        jToggleButton1 = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -93,6 +98,15 @@ public class SimpleVolumeCalcTest extends javax.swing.JFrame {
 
         jLabel4.setText("Result");
 
+        jLabel5.setText("Toggle component");
+
+        jToggleButton1.setText("Component I");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -123,21 +137,36 @@ public class SimpleVolumeCalcTest extends javax.swing.JFrame {
                                 .addGap(68, 68, 68)
                                 .addComponent(jButton1))))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(simpleVolumeCalc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(48, 48, 48)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
                             .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(42, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jToggleButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(simpleVolumeCalc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel5)))
+                .addGap(57, 57, 57)
+                .addComponent(prostyKalkulatorObjetosci1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(simpleVolumeCalc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(simpleVolumeCalc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(prostyKalkulatorObjetosci1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jToggleButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -179,15 +208,27 @@ public class SimpleVolumeCalcTest extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if (jRadioButton1.isSelected()) {
-            jTextField4.setText(String.valueOf(simpleVolumeCalc1.calcSphereVolume()));
+            if (currentComponent == 1) {
+                jTextField4.setText(String.valueOf(simpleVolumeCalc1.calcSphereVolume()));
+            } else {
+                jTextField4.setText(String.valueOf(prostyKalkulatorObjetosci1.calcSphereVolume()));
+            }
             return;
         }
         if (jRadioButton2.isSelected()) {
-            jTextField4.setText(String.valueOf(simpleVolumeCalc1.calcCylinderVolume()));
+            if (currentComponent == 1) {
+                jTextField4.setText(String.valueOf(simpleVolumeCalc1.calcCylinderVolume()));
+            } else {
+                jTextField4.setText(String.valueOf(prostyKalkulatorObjetosci1.calcCylinderVolume()));
+            }
             return;
         }
         if (jRadioButton3.isSelected()) {
-            jTextField4.setText(String.valueOf(simpleVolumeCalc1.calcConeVolume()));
+            if (currentComponent == 1) {
+                jTextField4.setText(String.valueOf(simpleVolumeCalc1.calcConeVolume()));
+            } else {
+                jTextField4.setText(String.valueOf(prostyKalkulatorObjetosci1.calcConeVolume()));
+            }
             return;
         }
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -195,6 +236,7 @@ public class SimpleVolumeCalcTest extends javax.swing.JFrame {
     private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
         try {
             simpleVolumeCalc1.setSolidRadius(Double.parseDouble(jTextField1.getText()));
+            prostyKalkulatorObjetosci1.setSolidRadius(Double.parseDouble(jTextField1.getText()));
         } catch (Exception exc) {
             return;
         }
@@ -203,6 +245,7 @@ public class SimpleVolumeCalcTest extends javax.swing.JFrame {
     private void jTextField2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyReleased
         try {
             simpleVolumeCalc1.setSolidHeight(Double.parseDouble(jTextField2.getText()));
+            prostyKalkulatorObjetosci1.setSolidHeight(Double.parseDouble(jTextField2.getText()));
         } catch (Exception exc) {
             return;
         }
@@ -214,6 +257,16 @@ public class SimpleVolumeCalcTest extends javax.swing.JFrame {
         else
             jTextField2.setEnabled(true);
     }//GEN-LAST:event_jRadioButton1StateChanged
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        if (jToggleButton1.getText().equals("Component I")) {
+            jToggleButton1.setText("Component II");
+            currentComponent = 2;
+        } else {
+            jToggleButton1.setText("Component I");
+            currentComponent = 1;
+        }
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -257,6 +310,7 @@ public class SimpleVolumeCalcTest extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
@@ -264,6 +318,8 @@ public class SimpleVolumeCalcTest extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JToggleButton jToggleButton1;
+    private KalkulatorObjetosci.ProstyKalkulatorObjetosci prostyKalkulatorObjetosci1;
     private VolumeCalc.SimpleVolumeCalc simpleVolumeCalc1;
     // End of variables declaration//GEN-END:variables
 }
