@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dawid Szemro, Jakub Wojciechowski">
+    <title>Sprawozdanie ZPK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Obliczanie objętości trzech figur</h1>
+    <p><b>Autorzy: </b> Dawid Szemro, Jakub Wojciechowski</p>
+
+    <h2>Cel</h2>
+    <p>Projekt o charakterze edukacyjnym.</p>
+
+    <h2>Zakres</h2>
+    <p>Projekt jest wykonany w technologi JavaBeans.</p>
+
+    <h2>Opis funkcjonlny</h2>
+
+    <table>
+        <thead>
+            <th>Lp.</th>
+            <th>Funkcjonalność</td>
+                <th>Opis</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1.</td>
+                <td>Obliczanie objętości kuli</td>
+                <td>Możliwość obliczenia objętości kuli</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Obliczanie objętości walca</td>
+                <td>Możliwość obliczenia objętości walca</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Obliczanie objętości stożka</td>
+                <td>Możliwość obliczenia objętości walca</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Opis niefunkcjonalny</h2>
+
+    <table>
+        <thead>
+            <th>Lp.</th>
+            <th>Nazwa</th>
+            <th>Opis</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1.</td>
+                <td>Zmiana wielkości komponentu</td>
+                <td>Możliwość zmiany wymiarów kształtu reprezentującego komponent</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Zmiana koloru komponentu</td>
+                <td>Możliwość zmiany koloru kształtu reprezentującego komponent</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Specyfikacja</h2>
+
+    <table>
+        <thead>
+            <th>Lp.</th>
+            <th>Sygnatura</th>
+            <th>Opis</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1.</td>
+                <td>double getSolidRadius()</td>
+                <td>Zwraca ustawiony wcześniej promień bryły.</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>void setSolidRadius(double)</td>
+                <td>Ustawia promień bryły</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>double getSolidHeight()</td>
+                <td>Zwraca wysokość bryły</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>void setSolidHeight(double)</td>
+                <td>Ustawia wysokość bryły</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>double calcSphereVolume()</td>
+                <td>Oblicza i zwraca objętość kuli o podanym wcześniej promieniu.</td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>double calcCylinderVolume()</td>
+                <td>Zwraca objętość walca obliczoną na podstawie ustawionych wcześniej wartości promienia oraz wysokości bryły.</td>
+            </tr>
+            <tr>
+                <td>7.</td>
+                <td>double calcConeVolume()</td>
+                <td>Zwraca objętość stożka obliczoną na podstawie ustawionych wcześniej wartości promienia oraz wysokości bryły.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Ważne zmienne prywatne</h2>
+
+    <table>
+        <thead>
+            <th>Lp.</th>
+            <th>Nazwa</th>
+            <th>Typ</th>
+            <th>Opis</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1.</td>
+                <td>solidRadius</td>
+                <td>double</td>
+                <td>Reprezentuje wartość promienia bryły, której objętość będzie obliczana</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>solidHeight</td>
+                <td>double</td>
+                <td>Reprezentuje wartość wysokości bryły, której objętość będzie obliczana</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Założenia testowania, plan testów</h2>
+
+    <p>
+        Główne funkcjonalności testowane będą testami jednostkowymi. Pozwoli to na szybkie i częste sprawdzanie, czy funkcjonalności komponentu działają zgodnie z założeniami. Testy te będą uruchamiane po każdej zmianie w kodzie komponentu.
+        Dodatkowo stworzona jest graficzna aplikacja testująca będąca „playgroundem”. Pozwala ona manualnie przetestować główne funkcjonalności komponentu. Aplikacja ta dodatkowo ukazuje przykładowe wykorzystanie komponentu.
+    </p>
+
+    <h2>GUI komponentu</h2>
+
+    <img src="./GUI-komponent.PNG" alt="GUI komponentu">
+
+    <p>
+        GUI komponentu jest reprezentowane przez kształt prostopadłościanu o krawędziach w określonym kolorze. 
+        Zarówno kolor, jak i wymiary komponentu można zmieniać w ramach customizacji.
+    </p>
+
+    <h2>Aplikacja testująca</h2>
+
+    <img src="./komponent-test-gui.PNG" alt="aplikacja testująca">
+
+    <p>
+        Aplikacja testująca zawiera w sobie komponent, kontrolki, etykiety oraz pola tekstowe służące do wyświetlania stanu komponentu oraz wyniku zwracanego przez komponent.<br>
+        Radius jest kontrolką, dzięki ktorej ustawiamy promień bryły.<br>
+        Height jest kontrolką, za pomocą której można ustawić wysokość bryły.<br>
+        Przy pomocy kontorlek radio "Solid" wybieramy figurę, której objętość chcemy obliczyć.<br>
+        "Result" jest polem tekstowym, na którym wyświetlany jest wynik operacji.<br>
+        Aby obliczyć objętość bryły na podstawie podanych parametrów należy wcisnąć przycisk "Calculate".<br>
+        Przycisk znajdujący się pod etykietą "Toggle component" służy do zamiany używanego komponentu w trakcie działania programu.
+    </p>
+
+    <h2>Wdrożenie</h2>
+
+    <p>
+        Aby użyć komponentu należy utworzyć jego instancję w dowolny sposób, jakie akceptuje kompilator. Dostęp do zmiennych komponentu można uzyskać poprzez akcesory. Wszystkie akcje komponentu należy obsłużyć porzprzez użycie zewnętrznych kontrolek, podpięcie do nich akcji, a w funkcji akcji wywołanie API komponentu.
+    </p>
+
+    <h2>Wnioski</h2>
+
+    <p>
+        Komponent wykonany w technologii JavaBean. Komponent spełnia cechy programowania komponentowego takie jak: rozpowszechnianie w postaci skompilowanej, hermetyzacja zmiennych, wymienialność w runtime, jasno określone API.
+        Oba komponenty spełniają swoje zadanie, a ich podmiana w trakcie działania programu nie jest zauważalna dla użytkownika.
+    </p>
+</body>
+</html>
