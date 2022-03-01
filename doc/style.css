@@ -2,6 +2,7 @@
 
 table {
   border-collapse: collapse;
+  max-width: 1000px;
 }
 
 table,
@@ -13,5 +14,4 @@ th {
 
 body {
   font-family: 'Poppins', sans-serif;
-  max-width: 70vw;
 }
