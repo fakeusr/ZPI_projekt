@@ -1,0 +1,9 @@
+[
+    {"sygnatura": "double getSolidRadius()", "opis": "Zwraca ustawiony wcześniej promień bryły.", "args": "-", "ograniczenia": "-"},
+    {"sygnatura": "void setSolidRadius(double)", "opis": "Ustawia promień bryły", "args": "double radius", "ograniczenia": "radius - dla prawidłowego funkcjonowania obliczeń wartość powinna być większa od 0"},
+    {"sygnatura": "double getSolidHeight()", "opis": "Zwraca wysokość bryły", "args": "-", "ograniczenia": "-"},
+    {"sygnatura": "void setSolidHeight(double)", "opis": "Ustawia wysokość bryły", "args": "double height", "ograniczenia": "height - dla prawidłowego funkcjonowania obliczeń wartość powinna być większa od 0"},
+    {"sygnatura": "double calcSphereVolume()", "opis": "Oblicza i zwraca objętość kuli o podanym wcześniej promieniu.", "args": "-", "ograniczenia": "-"},
+    {"sygnatura": "double calcCylinderVolume()", "opis": "Zwraca objętość walca obliczoną na podstawie ustawionych wcześniej wartości promienia oraz wysokości bryły.", "args": "-", "ograniczenia": "-"},
+    {"sygnatura": "double calcConeVolume()", "opis": "Zwraca objętość stożka obliczoną na podstawie ustawionych wcześniej wartości promienia oraz wysokości bryły.", "args": "-", "ograniczenia": "-"}
+]

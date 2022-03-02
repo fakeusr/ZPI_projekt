@@ -1,0 +1,4 @@
+[
+    {"opis": "Możliwość zmiany wymiarów kształtu reprezentującego komponent", "name": "Zmiana wielkości komponentu"},
+    {"name": "Zmiana koloru komponentu", "opis": "Możliwość zmiany koloru kształtu reprezentującego komponent"}
+]

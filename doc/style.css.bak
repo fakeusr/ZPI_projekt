@@ -17,5 +17,5 @@ body {
 }
 
 p {
-	max-width: 75ch;
+	max-width: 60ch;
 }

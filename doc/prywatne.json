@@ -1,0 +1,4 @@
+[
+    {"name": "solidRadius", "typ": "double", "opis": "Reprezentuje wartość promienia bryły, której objętość będzie obliczana"},
+    {"name": "solidHeight", "typ": "double", "opis": "Reprezentuje wartość wysokości bryły, której objętość będzie obliczana"}
+]

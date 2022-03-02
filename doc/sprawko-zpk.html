@@ -26,22 +26,7 @@
             <th>Funkcjonalność</td>
                 <th>Opis</th>
         </thead>
-        <tbody>
-            <tr>
-                <td>1.</td>
-                <td>Obliczanie objętości kuli</td>
-                <td>Możliwość obliczenia objętości kuli</td>
-            </tr>
-            <tr>
-                <td>2.</td>
-                <td>Obliczanie objętości walca</td>
-                <td>Możliwość obliczenia objętości walca</td>
-            </tr>
-            <tr>
-                <td>3.</td>
-                <td>Obliczanie objętości stożka</td>
-                <td>Możliwość obliczenia objętości walca</td>
-            </tr>
+        <tbody id="opis-funkc">
         </tbody>
     </table>
 
@@ -54,17 +39,7 @@
             <th>Opis</th>
         </thead>
 
-        <tbody>
-            <tr>
-                <td>1.</td>
-                <td>Zmiana wielkości komponentu</td>
-                <td>Możliwość zmiany wymiarów kształtu reprezentującego komponent</td>
-            </tr>
-            <tr>
-                <td>2.</td>
-                <td>Zmiana koloru komponentu</td>
-                <td>Możliwość zmiany koloru kształtu reprezentującego komponent</td>
-            </tr>
+        <tbody id="opis-niefunkc">
         </tbody>
     </table>
 
@@ -79,56 +54,7 @@
             <th>Ograniczenia</th>
         </thead>
 
-        <tbody>
-            <tr>
-                <td>1.</td>
-                <td>double getSolidRadius()</td>
-                <td>Zwraca ustawiony wcześniej promień bryły.</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>2.</td>
-                <td>void setSolidRadius(double)</td>
-                <td>Ustawia promień bryły</td>
-                <td>double radius</td>
-                <td>radius - dla prawidłowego funkcjonowania obliczeń wartość powinna być większa od 0</td>
-            </tr>
-            <tr>
-                <td>3.</td>
-                <td>double getSolidHeight()</td>
-                <td>Zwraca wysokość bryły</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>4.</td>
-                <td>void setSolidHeight(double)</td>
-                <td>Ustawia wysokość bryły</td>
-                <td>double height</td>
-                <td>height - dla prawidłowego funkcjonowania obliczeń wartość powinna być większa od 0</td>
-            </tr>
-            <tr>
-                <td>5.</td>
-                <td>double calcSphereVolume()</td>
-                <td>Oblicza i zwraca objętość kuli o podanym wcześniej promieniu.</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>6.</td>
-                <td>double calcCylinderVolume()</td>
-                <td>Zwraca objętość walca obliczoną na podstawie ustawionych wcześniej wartości promienia oraz wysokości bryły.</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>7.</td>
-                <td>double calcConeVolume()</td>
-                <td>Zwraca objętość stożka obliczoną na podstawie ustawionych wcześniej wartości promienia oraz wysokości bryły.</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
+        <tbody id="spec">
         </tbody>
     </table>
 
@@ -141,19 +67,7 @@
             <th>Typ</th>
             <th>Opis</th>
         </thead>
-        <tbody>
-            <tr>
-                <td>1.</td>
-                <td>solidRadius</td>
-                <td>double</td>
-                <td>Reprezentuje wartość promienia bryły, której objętość będzie obliczana</td>
-            </tr>
-            <tr>
-                <td>2.</td>
-                <td>solidHeight</td>
-                <td>double</td>
-                <td>Reprezentuje wartość wysokości bryły, której objętość będzie obliczana</td>
-            </tr>
+        <tbody id="prywatne">
         </tbody>
     </table>
 
@@ -203,5 +117,7 @@
         Komponent wykonany w technologii JavaBean. Komponent spełnia cechy programowania komponentowego takie jak: rozpowszechnianie w postaci skompilowanej, hermetyzacja zmiennych, wymienialność w runtime, jasno określone API.
         Oba komponenty spełniają swoje zadanie, a ich podmiana w trakcie działania programu nie jest zauważalna dla użytkownika.
     </p>
+
+    <script src="./script.js"></script>
 </body>
 </html>

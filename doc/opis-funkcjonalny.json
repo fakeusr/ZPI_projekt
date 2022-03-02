@@ -1,0 +1,5 @@
+[
+    {"name": "Obliczanie objętości kuli", "opis": "Możliwość obliczenia objętości kuli"},
+    {"name": "Obliczanie objętości walca", "opis": "Możliwość obliczenia objętości walca"},
+    {"name": "Obliczanie objętości stożka", "opis": "Możliwość obliczenia objętości stożka"}
+]
